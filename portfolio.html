@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- AOS CSS -->
+    <link rel="icon" href="https://i.pinimg.com/736x/b3/47/a8/b347a8c125bae58758e4efd82e987008.jpg" type="image/png"> <!-- Favicon -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+            color: #e0e0e0;
+        }
+        .navbar {
+            background-color: #2e2e2e;
+        }
+        .navbar-brand {
+            color: #d4af37; /* Warna emas */
+        }
+        .navbar-nav .nav-link {
+            color: #f0f0f0;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d4af37; /* Emas saat hover */
+        }
+        .dropdown-menu {
+            background-color: #2e2e2e; /* Warna dropdown menu */
+        }
+        .dropdown-menu .dropdown-item {
+            color: #f0f0f0;
+        }
+        .dropdown-menu .dropdown-item:hover {
+            color: #d4af37; /* Emas saat hover */
+            background-color: #3a3a3a; /* Warna latar belakang item saat hover */
+        }
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Memenuhi tinggi layar */
+            background: url('https://i.pinimg.com/564x/13/b2/37/13b237ff173d6678cc9d9da0d0cc6d73.jpg') no-repeat center center/cover; /* Gambar */
+            color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%); /* Gradasi gelap dari transparan ke hitam */
+            z-index: 1; /* Menempatkan overlay di atas gambar */
+        }
+        .banner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            padding: 20px;
+            border-radius: 8px;
+            color: #d4af37; /* Emas untuk teks */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Efek shadow pada teks */
+            animation: slideIn 1s ease-out;
+            z-index: 2; /* Menempatkan teks di atas overlay */
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .biodata {
+            padding: 40px;
+            background-color: #2e2e2e; /* Warna latar belakang yang konsisten */
+            color: #f0f0f0;
+        }
+        .biodata h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* Emas untuk header */
+            margin-bottom: 20px;
+        }
+        .biodata-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-direction: row;
+        }
+        .biodata-content img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .biodata-text {
+            flex: 1;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333333;
+            color: #f0f0f0;
+        }
+        a {
+            color: #d4af37; /* Emas untuk link */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .biodata-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .biodata-content img {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Nama Anda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#biodata">Biodata</a>
+                        <a class="dropdown-item" href="#education">Riwayat Pendidikan</a>
+                        <a class="dropdown-item" href="#organization">Riwayat Organisasi</a>
+                        <a class="dropdown-item" href="#achievements">Riwayat Prestasi</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1 data-aos="fade-down">Selamat Datang di Portofolio Saya</h1>
+    </div>
+
+    <!-- Konten Biodata -->
+    <div id="biodata" class="biodata">
+        <div class="container">
+            <h2 data-aos="fade-up">Biodata</h2>
+            <div class="biodata-content" data-aos="fade-left">
+                <img src="https://i.pinimg.com/736x/84/31/47/8431472089ca7a0c1834442629f7cb59.jpg" alt="Foto Profil">
+                <div class="biodata-text">
+                    <p>
+                        Nama Lengkap: [Nama Anda]<br>
+                        Tempat, Tanggal Lahir: [Tempat, Tanggal Lahir]<br>
+                        Alamat: [Alamat Anda]<br>
+                        Pendidikan Terakhir: [Pendidikan Terakhir]<br>
+                        Pekerjaan Saat Ini: [Pekerjaan Saat Ini]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Portofolio Anda</p>
+    </div>
+
+    <!-- Bootstrap JS dan dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS JS -->
+    <script>
+        AOS.init({
+            duration: 1000, // Durasi animasi dalam milidetik
+            easing: 'ease-in-out', // Jenis easing animasi
+        });
+    </script>
+</body>
+</html>
