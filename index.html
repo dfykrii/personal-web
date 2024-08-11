@@ -188,6 +188,9 @@
         <div class="profile-name">Nama Anda</div>
         <p>Selamat datang di halaman pribadi saya. Di sini Anda dapat menemukan informasi kontak saya dan menjelajahi berbagai gambar yang menarik.</p>
 
+        <!-- Tautan ke Portofolio -->
+        <p><a href="portfolio.html">Lihat Portofolio Saya</a></p>
+
         <!-- Galeri Grid -->
         <div class="gallery">
             <img src="https://i.pinimg.com/736x/5b/ee/33/5bee33395cabd9ffdbf1942b493426b9.jpg" alt="Gambar 1" class="large-vertical">
@@ -201,36 +204,40 @@
             <a href="mailto:levi4ckerm4n1@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
             <a href="https://wa.me/6283827521027" title="Telepon" target="_blank"><i class="fas fa-phone"></i></a>
             <a href="https://www.google.com/maps?q=Jl.+Contoh+No.+123,+Kota,+Negara" title="Alamat" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-            <a href="https://www.instagram.com/dfykrii_/#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/yourusername" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/dfddf" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/dfddf" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Halaman Pribadi Anda</p>
         </div>
     </div>
 
     <!-- Modal -->
     <div id="modal" class="modal">
-        <div id="modal-content" class="modal-content">
+        <div class="modal-content">
             <img id="modal-image" src="" alt="Gambar Besar">
         </div>
     </div>
 
-    <div class="footer">
-        &copy; 2024 Halaman Pribadi
-    </div>
-
     <script>
-        const galleryImages = document.querySelectorAll('.gallery img');
+        // Mendapatkan elemen modal dan gambar modal
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modal-image');
 
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
-                modalImage.src = image.src;
+        // Menambahkan event listener ke setiap gambar
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src;
                 modal.classList.add('show');
             });
         });
 
-        modal.addEventListener('click', () => {
-            modal.classList.remove('show');
+        // Menutup modal saat area di luar gambar diklik
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
         });
     </script>
 </body>
