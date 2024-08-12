@@ -6,21 +6,25 @@
     <title>Halaman Pribadi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="https://i.pinimg.com/736x/b3/47/a8/b347a8c125bae58758e4efd82e987008.jpg" type="image/png"> <!-- Favicon -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%); /* Gradasi latar belakang lebih lembut */
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1b 100%); /* Gradien ungu gelap dan biru gelap lebih gelap */
             color: #e0e0e0;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Menjaga tinggi minimal halaman penuh */
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #2e2e2e; /* Warna kontainer yang lebih lembut */
+            background-color: rgba(255, 255, 255, .1); /* Transparansi pada warna latar belakang kontainer */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             text-align: center;
@@ -133,10 +137,10 @@
         .fa-facebook { color: #1877f2; } /* Birumuda untuk Facebook */
         .footer {
             text-align: center;
-            margin-top: 20px;
             padding: 10px;
             background-color: #333333;
             color: #f0f0f0;
+            margin-top: auto; /* Mengatur footer berada di bawah konten */
         }
         a {
             color: #d4af37; /* Emas untuk link */
@@ -207,10 +211,11 @@
             <a href="https://www.instagram.com/dfddf" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/dfddf" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
+    </div>
 
-        <div class="footer">
-            <p>&copy; 2024 Halaman Pribadi Anda</p>
-        </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Halaman Pribadi Anda</p>
     </div>
 
     <!-- Modal -->
@@ -220,6 +225,9 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Mendapatkan elemen modal dan gambar modal
         const modal = document.getElementById('modal');
