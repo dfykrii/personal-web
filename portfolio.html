@@ -42,35 +42,9 @@
         .navbar-nav .nav-link:hover {
             color: #d4af37; /* Emas saat hover */
         }
-        .dropdown-menu {
-            background-color: rgba(255, 255, 255, 0.1); /* Putih transparan dengan alpha 0.1 */
-            border: none; /* Hapus border dropdown */
-            border-radius: 8px; /* Membuat sudut dropdown membulat */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan shadow */
-            padding: 0.5rem 0;
-            transition: opacity 0.3s ease, transform 0.3s ease; /* Transisi animasi */
-            opacity: 0;
-            transform: scale(0.95);
-            z-index: 1000; /* Menempatkan dropdown di atas elemen lain */
-        }
-        .dropdown-menu.show {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .dropdown-menu .dropdown-item {
-            color: #e0e0e0; /* Warna teks item dropdown */
-            padding: 10px 20px;
-            border-radius: 4px; /* Membuat sudut item membulat */
-            transition: background-color 0.3s, color 0.3s; /* Transisi animasi */
-        }
-        .dropdown-menu .dropdown-item:hover {
-            color: #d4af37; /* Emas saat hover */
-            background-color: #333; /* Warna latar belakang item saat hover */
-        }
-        .biodata {
+        .about, #organization {
             padding: 40px;
             background-color: transparent; /* Tidak ada warna latar belakang */
-            color: #e0e0e0;
             margin-top: 70px; /* Memberikan jarak di atas konten untuk menghindari terhalang navbar */
         }
         .biodata-content {
@@ -90,24 +64,37 @@
             transform: scale(1.05); /* Efek zoom saat hover */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Memperbesar shadow saat hover */
         }
-        .biodata-content .biodata-text {
-            color: #e0e0e0;
-        }
-        .education {
-            padding: 40px;
-            background-color: transparent; /* Tidak ada warna latar belakang */
-        }
         .card {
-            background-color: rgba(255, 255, 255, 0.2); /* Putih transparan dengan alpha 0.2 */
-            border: none; /* Hapus border card */
-            border-radius: 8px; /* Membuat sudut card membulat */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Menambahkan shadow */
-            transition: background-color 0.3s, box-shadow 0.3s; /* Transisi animasi */
-        }
-        .card:hover {
-            background-color: rgba(255, 255, 255, 0.3); /* Putih transparan dengan alpha 0.3 saat hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Memperbesar shadow saat hover */
-        }
+        background: linear-gradient(135deg, #1a1a2e 0%, #2c003e 100%); /* Gradient latar belakang card */
+        border: 1px solid #444; /* Border tipis */
+        border-radius: 12px; /* Membuat sudut card membulat */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow lembut */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi animasi */
+    }
+    .card-body {
+        padding: 20px;
+    }
+    .card-title {
+        font-family: 'Playfair Display', serif;
+        color: #f8f9fa; /* Warna teks card */
+        font-size: 1.5rem; /* Ukuran font judul lebih besar */
+        margin-bottom: 0.5rem;
+    }
+    .card-text {
+        color: #e0e0e0; /* Warna teks card */
+    }
+    .btn-outline-light {
+        color: #f8f9fa; /* Warna teks tombol */
+        border-color: #f8f9fa; /* Warna border tombol */
+    }
+    .btn-outline-light:hover {
+        background-color: #f8f9fa; /* Warna latar belakang tombol saat hover */
+        color: #1a1a2e; /* Warna teks tombol saat hover */
+    }
+    .card:hover {
+        transform: translateY(-5px); /* Efek angkat saat hover */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Shadow lebih besar saat hover */
+    }
         .footer {
             text-align: center;
             margin-top: 20px;
@@ -122,6 +109,50 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Timeline Layout Styling */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            border-left: 2px solid #444; /* Garis vertikal timeline */
+            top: 0;
+        }
+
+        .timeline-item-content {
+        background-color: #1a1a2e; /* Latar belakang item timeline */
+        border-radius: 12px; /* Sudut item membulat */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow lembut */
+        transition: background-color 0.3s, box-shadow 0.3s; /* Transisi animasi */
+        padding: 20px;
+    }
+    .timeline-item-content:hover {
+        background-color: #282c36; /* Latar belakang lebih gelap saat hover */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Shadow lebih besar saat hover */
+    }
+    .timeline-item-content h5 {
+        margin-top: 0;
+        font-family: 'Playfair Display', serif;
+        color: #f8f9fa; /* Warna teks */
+        font-size: 1.5rem; /* Ukuran font judul lebih besar */
+    }
+    .timeline-item-content p {
+        color: #e0e0e0; /* Warna teks */
+        font-size: 1rem; /* Ukuran font deskripsi */
+    }
     </style>
 </head>
 <body>
@@ -136,16 +167,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#biodata">Biodata</a>
-                        <a class="dropdown-item" href="#education">Riwayat Pendidikan</a>
-                        <a class="dropdown-item" href="#organization">Riwayat Organisasi</a>
-                        <a class="dropdown-item" href="#achievements">Riwayat Prestasi</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Layanan</a>
@@ -157,76 +180,99 @@
         </div>
     </nav>
 
-    <!-- Konten Biodata -->
-    <div id="biodata" class="biodata">
+    <!-- Konten About -->
+    <div id="about" class="about">
         <div class="container">
-            <div class="biodata-content" data-aos="fade-left">
-                <img src="https://i.pinimg.com/736x/b3/47/a8/b347a8c125bae58758e4efd82e987008.jpg" alt="Foto Profil">
-                <div class="biodata-text">
-                    <h1>Nama Anda</h1>
-                    <p>
-                        Deskripsi singkat tentang diri Anda.<br>
-                        Email: <a href="mailto:[email@example.com]">[email@example.com]</a><br>
-                        Telepon: [Nomor Telepon]
-                    </p>
+            <div id="biodata">
+                <div class="biodata-content" data-aos="fade-left">
+                    <img src="https://via.placeholder.com/200" alt="Foto Profil">
+                    <div class="biodata-text">
+                        <h1>Nama Anda</h1>
+                        <p>Deskripsi singkat tentang Anda. Misalnya, informasi tentang latar belakang, minat, dan tujuan.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="education">
+                <h3 class="text-center">Riwayat Pendidikan</h3>
+                <div class="row">
+                    <!-- Card Pendidikan -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">MI Pasanggrahan</h5>
+                                <p class="card-text">Kota: Tasikmalaya</p>
+                                <p class="card-text">Periode: 2014 - 2017</p>
+                                <a href="https://example.com" class="btn btn-outline-light" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tambahkan card pendidikan lainnya di sini -->
+                                         <!-- Card SDN Baciro -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SDN Baciro</h5>
+                                <p class="card-text">Tahun Masuk: 2017<br>Tahun Keluar: 2019<br>Kota: Yogyakarta</p>
+                                <a href="https://sdn-baciro.sch.id" class="btn btn-outline-light" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card SMP -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SMP Al Kamil</h5>
+                                <p class="card-text">Tahun Masuk: 2019<br>Tahun Keluar: 2022<br>Kota: Cianjur</p>
+                                <a href="https://smp-al-kamil.sch.id" class="btn btn-outline-light" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card SMA -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SMA Al Kamil</h5>
+                                <p class="card-text">Tahun Masuk: 2022<br>Tahun Keluar: 2025<br>Kota: Cianjur</p>
+                                <a href="https://sma-al-kamil.sch.id" class="btn btn-outline-light" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Konten Pendidikan -->
-    <div id="education" class="education">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Riwayat Pendidikan</h2>
-            <div class="row">
-                <!-- Card untuk SD -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" data-aos="fade-up">
-                        <div class="card-body">
-                            <h5 class="card-title">Sekolah Dasar</h5>
-                            <p class="card-text">Nama Sekolah Dasar: SD [Nama Sekolah]</p>
-                            <p class="card-text"><small class="text-muted">Tahun Masuk - Tahun Lulus</small></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card untuk SMP -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" data-aos="fade-up">
-                        <div class="card-body">
-                            <h5 class="card-title">Sekolah Menengah Pertama</h5>
-                            <p class="card-text">Nama Sekolah Menengah Pertama: SMP [Nama Sekolah]</p>
-                            <p class="card-text"><small class="text-muted">Tahun Masuk - Tahun Lulus</small></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card untuk SMA -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" data-aos="fade-up">
-                        <div class="card-body">
-                            <h5 class="card-title">Sekolah Menengah Atas</h5>
-                            <p class="card-text">Nama Sekolah Menengah Atas: SMA [Nama Sekolah]</p>
-                            <p class="card-text"><small class="text-muted">Tahun Masuk - Tahun Lulus</small></p>
-                        </div>
-                    </div>
+<!-- Konten Riwayat Organisasi -->
+<div id="organization">
+    <h3 class="text-center">Riwayat Organisasi</h3>
+    <div class="container">
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-item-content" data-aos="fade-up">
+                    <h5>OPPMA (Organisasi Pelajar Pondok Modern Alkamil)</h5>
+                    <p>Posisi: Language Division & Healty Division</p>
+                    <p>Periode: 2023 - 2024</p>
+                    <p>Deskripsi: Memimpin berbagai kegiatan, mengorganisasi acara tahunan, dan melakukan koordinasi antar anggota.</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+
+    <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Portofolio Anda</p>
+        <p>&copy; 2024 Nama Anda. All Rights Reserved.</p>
     </div>
 
-    <!-- Bootstrap JS dan dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS JS -->
     <script>
-        AOS.init({
-            duration: 1000, // Durasi animasi dalam milidetik
-            easing: 'ease-in-out', // Jenis easing animasi
-        });
+        AOS.init();
     </script>
 </body>
 </html>
