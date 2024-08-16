@@ -1,0 +1,419 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d1a;
+  /* background: linear-gradient(135deg, #0d0d1a 0%, #2c003e 100%); */
+  color: #e0e0e0;
+  overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
+.container {
+  max-width: 100%; /* Memastikan kontainer tidak melebihi lebar viewport */
+  padding: 0;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navbar {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Putih transparan dengan alpha 0.1 */
+  padding: 0.5rem 1rem;
+  position: fixed; /* Membuat navbar tetap berada di atas */
+  width: 100%; /* Lebar navbar 100% */
+  top: 0; /* Memastikan navbar berada di bagian atas */
+  z-index: 10; /* Menempatkan navbar di atas elemen lain */
+  backdrop-filter: blur(10px); /* Efek blur pada latar belakang navbar */
+}
+
+.navbar-brand {
+  color: #e0e0e0; /* Warna teks navbar */
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  margin-left: auto; /* Mendorong navbar-nav ke kanan */
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0; /* Warna teks navbar */
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4af37; /* Emas saat hover */
+}
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Warna latar belakang transparan */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border transparan */
+  backdrop-filter: blur(10px); /* Efek blur pada latar belakang dropdown */
+  border-radius: 8px; /* Sudut dropdown membulat */
+  padding: 0.5rem 0; /* Padding pada dropdown */
+}
+
+.navbar .dropdown-item {
+  color: #e0e0e0; /* Warna teks item dropdown */
+  padding: 0.5rem 1rem; /* Padding item dropdown */
+  transition: background-color 0.3s; /* Transisi latar belakang */
+}
+
+.navbar .dropdown-item:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Warna latar belakang saat hover */
+  color: #d4af37; /* Warna teks saat hover */
+}
+
+.about,
+#organization {
+  /* padding: 40px; */
+  background-color: transparent; /* Tidak ada warna latar belakang */
+  margin-top: 70px; /* Memberikan jarak di atas konten untuk menghindari terhalang navbar */
+}
+.container .back-1 {
+  background: linear-gradient(to bottom, #0d0d1a 0%, #08007c 50%, #2c003e 100%);
+}
+
+.biodata-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px; /* Padding di sekitar konten biodata */
+}
+
+.biodata-text {
+  padding: 20px;
+}
+
+.biodata-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d4af37;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.biodata-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.biodata-text p {
+  color: #e0e0e0;
+}
+.biodata-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 767px) {
+  .biodata-content {
+    flex-direction: column; /* Gambar di atas teks pada layar kecil */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .biodata-text {
+    padding-top: 0;
+  }
+}
+/* Styling untuk Konten Who Am I */
+.who-am-i {
+  margin-top: 20px; /* Jarak dari konten sebelumnya */
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.who-am-i-photo {
+  text-align: center;
+}
+
+.who-am-i-photo img {
+  width: 100%; /* Menyesuaikan lebar gambar dengan container */
+  max-width: 300px; /* Ukuran maksimum gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.who-am-i-text {
+  background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+  border-radius: 8px; /* Membuat sudut membulat */
+  padding: 20px;
+  color: #e0e0e0; /* Warna teks */
+  text-align: left;
+}
+
+.who-am-i-text h3 {
+  font-family: "Playfair Display", serif;
+  color: #f8f9fa;
+  margin-bottom: 15px;
+}
+
+.who-am-i-text p {
+  color: #e0e0e0;
+}
+.social-icons {
+  margin-top: 10px; /* Jarak antara teks dan ikon */
+}
+
+.social-icons a {
+  color: #e0e0e0; /* Warna ikon */
+  font-size: 1.5rem; /* Ukuran ikon */
+  margin-right: 15px; /* Jarak antar ikon */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d4af37; /* Warna ikon saat hover */
+}
+
+@media (max-width: 768px) {
+  .who-am-i {
+    flex-direction: column-reverse; /* Posisi gambar di bawah teks pada layar kecil */
+  }
+
+  .who-am-i-text {
+    margin-top: 20px; /* Jarak antara teks dan gambar pada layar kecil */
+  }
+
+  .who-am-i-photo {
+    text-align: center; /* Pusatkan gambar saat di layar kecil */
+  }
+
+  .social-icons {
+    text-align: center; /* Pusatkan ikon saat di layar kecil */
+  }
+}
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #2c003e 100%
+  ); /* Gradient latar belakang card */
+  border: 1px solid #444; /* Border tipis */
+  border-radius: 12px; /* Membuat sudut card membulat */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow lembut */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi animasi */
+}
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  font-family: "Playfair Display", serif;
+  color: #f8f9fa; /* Warna teks card */
+  font-size: 1.5rem; /* Ukuran font judul lebih besar */
+  margin-bottom: 0.5rem;
+}
+.card-text {
+  color: #e0e0e0; /* Warna teks card */
+}
+.btn-outline-light {
+  color: #f8f9fa; /* Warna teks tombol */
+  border-color: #f8f9fa; /* Warna border tombol */
+}
+.btn-outline-light:hover {
+  background-color: #f8f9fa; /* Warna latar belakang tombol saat hover */
+  color: #1a1a2e; /* Warna teks tombol saat hover */
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.8
+  ); /* Transparansi pada warna latar belakang footer */
+  color: #f0f0f0;
+}
+
+a {
+  color: #d4af37; /* Emas untuk link */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styling untuk Konten Riwayat Organisasi */
+.section-title {
+  font-family: "Playfair Display", serif;
+  color: #f8f9fa; /* Warna teks judul */
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center; /* Judul rata kiri */
+}
+
+.section-description {
+  color: #e0e0e0; /* Warna teks deskripsi */
+  font-size: 1rem;
+  margin-bottom: 20px; /* Jarak antara deskripsi dan item */
+  text-align: center; /* Deskripsi rata kiri */
+}
+
+.organization-list {
+  margin-top: 20px;
+}
+
+.organization-item {
+  background: #1a1a2e; /* Warna latar belakang item */
+  border: 1px solid #444; /* Border item */
+  border-radius: 8px; /* Sudut item membulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow lembut */
+  padding: 20px;
+  margin-bottom: 20px; /* Jarak antar item */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transisi animasi */
+  max-width: 800px; /* Lebar maksimum item */
+  margin-left: auto; /* Margin kiri otomatis */
+  margin-right: auto; /* Margin kanan otomatis */
+}
+
+.organization-content {
+  display: flex;
+  align-items: center;
+}
+
+.organization-image {
+  flex: 1;
+  margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.organization-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.organization-text {
+  flex: 2;
+}
+
+.organization-role {
+  font-family: "Playfair Display", serif;
+  color: #f8f9fa; /* Warna teks jabatan */
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.organization-name {
+  color: #e0e0e0; /* Warna teks nama organisasi */
+  font-size: 1rem;
+  margin: 0;
+}
+
+.organization-text p {
+  color: #e0e0e0; /* Warna teks deskripsi */
+  margin: 0;
+}
+
+/* Atur styling untuk reverse */
+.organization-item.reverse .organization-content {
+  flex-direction: row-reverse;
+}
+
+.organization-item:hover {
+  background-color: #282c36; /* Warna latar belakang lebih gelap saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow lebih besar saat hover */
+}
+/* Styling untuk Judul Skills */
+.skills-title {
+  text-align: center; /* Pusatkan judul */
+  color: #f8f9fa; /* Warna teks judul */
+  margin-bottom: 10px; /* Jarak antara judul dan deskripsi */
+  font-family: "Playfair Display", serif;
+  font-size: 2rem; /* Ukuran font judul */
+}
+
+/* Styling untuk Deskripsi Singkat */
+.skills-description {
+  text-align: center; /* Pusatkan deskripsi */
+  color: #e0e0e0; /* Warna teks deskripsi */
+  margin-bottom: 20px; /* Jarak antara deskripsi dan konten */
+  font-size: 1rem; /* Ukuran font deskripsi */
+}
+
+/* Styling untuk Kontainer Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Membungkus item ke baris berikutnya */
+  gap: 10px; /* Jarak antar item */
+  justify-content: center; /* Pusatkan item secara horizontal */
+}
+
+/* Styling untuk Setiap Item Skill */
+.skill-category {
+  background: #1a1a2e; /* Warna latar belakang */
+  border: 1px solid #444; /* Border item */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow lembut */
+  color: #e0e0e0;
+  text-align: center; /* Pusatkan teks */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Lebar item tetap */
+  height: 200px; /* Tinggi item tetap */
+  /* Memastikan item tetap berbentuk persegi */
+  box-sizing: border-box; /* Menghitung padding dan border dalam lebar dan tinggi */
+}
+
+/* Styling untuk Nama Skill */
+.skill-category h3 {
+  font-family: "Playfair Display", serif;
+  color: #f8f9fa;
+  margin-bottom: 10px;
+}
+
+/* Styling untuk Level Kemampuan */
+.skill-category p {
+  color: #d4af37; /* Warna level kemampuan */
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Responsive Design untuk layar kecil */
+@media (max-width: 768px) {
+  .skill-category {
+    width: 45%; /* Dua item per baris dengan margin */
+    height: 200px; /* Tinggi tetap */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category {
+    width: 90%; /* Satu item per baris pada layar sangat kecil */
+    height: 200px; /* Tinggi tetap */
+  }
+}
