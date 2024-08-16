@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portofolio pribadi Ade Fikri, mencakup biodata, riwayat pendidikan, dan pengalaman organisasi." />
     <title>Portofolio Saya</title>
     <link
       rel="stylesheet"
@@ -27,261 +28,8 @@
       type="image/png"
     />
     <!-- Favicon -->
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(
-          135deg,
-          #0d0d1a 0%,
-          #2c003e 100%
-        ); /* Gradient dari biru tua ke ungu sangat gelap */
-        color: #e0e0e0;
-      }
-
-      .navbar {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.1
-        ); /* Putih transparan dengan alpha 0.1 */
-        padding: 0.5rem 1rem;
-        position: fixed; /* Membuat navbar tetap berada di atas */
-        width: 100%; /* Lebar navbar 100% */
-        top: 0; /* Memastikan navbar berada di bagian atas */
-        z-index: 10; /* Menempatkan navbar di atas elemen lain */
-        backdrop-filter: blur(10px); /* Efek blur pada latar belakang navbar */
-      }
-
-      .navbar-brand {
-        color: #e0e0e0; /* Warna teks navbar */
-        font-family: "Playfair Display", serif;
-        font-size: 1.5rem;
-      }
-
-      .navbar-nav {
-        margin-left: auto; /* Mendorong navbar-nav ke kanan */
-      }
-
-      .navbar-nav .nav-link {
-        color: #e0e0e0; /* Warna teks navbar */
-        margin-right: 1rem;
-        transition: color 0.3s;
-      }
-
-      .navbar-nav .nav-link:hover {
-        color: #d4af37; /* Emas saat hover */
-      }
-      /* Dropdown Menu Styling */
-      .navbar .dropdown-menu {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.1
-        ); /* Warna latar belakang transparan */
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Border transparan */
-        backdrop-filter: blur(
-          10px
-        ); /* Efek blur pada latar belakang dropdown */
-        border-radius: 8px; /* Sudut dropdown membulat */
-        padding: 0.5rem 0; /* Padding pada dropdown */
-      }
-
-      .navbar .dropdown-item {
-        color: #e0e0e0; /* Warna teks item dropdown */
-        padding: 0.5rem 1rem; /* Padding item dropdown */
-        transition: background-color 0.3s; /* Transisi latar belakang */
-      }
-
-      .navbar .dropdown-item:hover {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.2
-        ); /* Warna latar belakang saat hover */
-        color: #d4af37; /* Warna teks saat hover */
-      }
-
-      .about,
-      #organization {
-        padding: 40px;
-        background-color: transparent; /* Tidak ada warna latar belakang */
-        margin-top: 70px; /* Memberikan jarak di atas konten untuk menghindari terhalang navbar */
-      }
-
-      .biodata-content {
-        text-align: center;
-        padding: 20px; /* Padding di sekitar konten biodata */
-      }
-
-      .biodata-content img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 5px solid #d4af37;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 20px;
-      }
-
-      .biodata-content img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-      }
-      /* Styling untuk Konten Who Am I */
-      .who-am-i {
-    margin-top: 20px; /* Jarak dari konten sebelumnya */
-    display: flex;
-    align-items: flex-start;
-}
-
-.who-am-i-photo {
-    text-align: center;
-}
-
-.who-am-i-photo img {
-    width: 100%; /* Menyesuaikan lebar gambar dengan container */
-    max-width: 300px; /* Ukuran maksimum gambar */
-    height: auto; /* Menjaga rasio aspek gambar */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.who-am-i-text {
-    background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
-    border-radius: 8px; /* Membuat sudut membulat */
-    padding: 20px;
-    color: #e0e0e0; /* Warna teks */
-    text-align: left;
-}
-
-.who-am-i-text h3 {
-    font-family: 'Playfair Display', serif;
-    color: #f8f9fa;
-    margin-bottom: 15px;
-}
-
-.who-am-i-text p {
-    color: #e0e0e0;
-}
-
-
-
-      .carousel-item img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .card {
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 0%,
-          #2c003e 100%
-        ); /* Gradient latar belakang card */
-        border: 1px solid #444; /* Border tipis */
-        border-radius: 12px; /* Membuat sudut card membulat */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow lembut */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi animasi */
-      }
-      .card-body {
-        padding: 20px;
-      }
-      .card-title {
-        font-family: "Playfair Display", serif;
-        color: #f8f9fa; /* Warna teks card */
-        font-size: 1.5rem; /* Ukuran font judul lebih besar */
-        margin-bottom: 0.5rem;
-      }
-      .card-text {
-        color: #e0e0e0; /* Warna teks card */
-      }
-      .btn-outline-light {
-        color: #f8f9fa; /* Warna teks tombol */
-        border-color: #f8f9fa; /* Warna border tombol */
-      }
-      .btn-outline-light:hover {
-        background-color: #f8f9fa; /* Warna latar belakang tombol saat hover */
-        color: #1a1a2e; /* Warna teks tombol saat hover */
-      }
-
-      .footer {
-        text-align: center;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: rgba(
-          51,
-          51,
-          51,
-          0.8
-        ); /* Transparansi pada warna latar belakang footer */
-        color: #f0f0f0;
-      }
-
-      a {
-        color: #d4af37; /* Emas untuk link */
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Timeline Layout Styling */
-      .timeline {
-        position: relative;
-        padding: 20px 0;
-        margin: 20px 0;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin: 20px 0;
-      }
-
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        border-left: 2px solid #444; /* Garis vertikal timeline */
-        top: 0;
-      }
-
-      .timeline-item-content {
-        position: relative;
-        padding: 20px;
-        background-color: #2d2d44; /* Latar belakang item timeline */
-        border-radius: 12px; /* Sudut item membulat */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Shadow */
-        transition: background-color 0.3s, box-shadow 0.3s; /* Transisi animasi */
-        margin-left: 30px; /* Jarak dari garis vertikal */
-        border-left: 5px solid #d4af37; /* Garis emas di sebelah kiri card */
-      }
-
-      .timeline-item-content:hover {
-        background-color: #282c36; /* Latar belakang lebih gelap saat hover */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Shadow lebih besar saat hover */
-      }
-
-      .timeline-item-content h5 {
-        margin-top: 0;
-        font-family: "Playfair Display", serif;
-        color: #f8f9fa; /* Warna teks */
-        font-size: 1.25rem;
-      }
-
-      .timeline-item-content p {
-        color: #e0e0e0; /* Warna teks */
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -299,7 +47,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <!-- Menggunakan ml-auto untuk memposisikan link ke kanan -->
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -317,7 +64,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Who Am I</a>
-              <a class="dropdown-item" href="#">Biografy</a>
+              <a class="dropdown-item" href="#">Biografi</a>
               <a class="dropdown-item" href="#">Skill</a>
             </div>
           </li>
@@ -337,175 +84,242 @@
     <!-- Konten About -->
     <div class="about">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 biodata-content">
-            <img
-              src="https://i.pinimg.com/736x/44/3b/0a/443b0aaa3314b095a968554ac68fbdbc.jpg"
-              alt="Foto Profil"
-            />
-            <h2>Nama Anda</h2>
-            <p>
-              Selamat datang di halaman portofolio saya. Saya seorang [profesi
-              atau deskripsi singkat tentang Anda].
+        <div class="back-1">
+          <div class="row biodata-content">
+            <div class="col-md-4 text-center">
+              <img
+                src="https://i.pinimg.com/736x/44/3b/0a/443b0aaa3314b095a968554ac68fbdbc.jpg"
+                alt="Foto Profil"
+              />
+            </div>
+            <div class="col-md-8 biodata-text">
+              <h2>Nama Anda</h2>
+              <p><strong>Nama Lengkap:</strong> Ade Fikri</p>
+              <p><strong>Tempat, Tanggal Lahir:</strong> Tasikmalaya, 5 Oktober 2006</p>
+              <p><strong>Alamat:</strong> Jl. Merdeka No. 123, Jakarta</p>
+              <p><strong>Hobi:</strong> Membaca, Bersepeda, Traveling</p>
+            </div>
+          </div>
+          <!-- Konten Who Am I -->
+          <div class="row who-am-i">
+            <div class="col-md-6 who-am-i-text">
+              <h3>Who Am I</h3>
+              <p>
+                Saya adalah seorang [deskripsi mendalam tentang diri Anda]. Saya memiliki
+                ketertarikan dan keahlian dalam [bidang yang relevan]. Dengan pengalaman
+                dalam [pengalaman atau pencapaian], saya berkomitmen untuk [tujuan atau
+                nilai].
+              </p>
+              <!-- Tambahkan ikon media sosial di sini, di bawah teks -->
+              <div class="social-icons mt-3">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/yourphonenumber" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/yourprofile" target="_blank">
+                  <i class="fab fa-telegram"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 who-am-i-photo text-center">
+              <img
+                src="https://i.pinimg.com/736x/44/3b/0a/443b0aaa3314b095a968554ac68fbdbc.jpg"
+                alt="Who Am I Photo"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Konten Riwayat Pendidikan -->
+        <div class="about">
+          <div class="container">
+            <h2 class="text-center" data-aos="fade-right">Riwayat Pendidikan</h2>
+            <p class="text-center col-md-6 offset-md-3" data-aos="fade-left">
+              Berikut adalah riwayat pendidikan saya dari tingkat dasar hingga
+              tingkat lanjutan, mencakup berbagai institusi yang telah saya jalani
+              selama proses belajar dan pengembangan pribadi saya.
             </p>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-10">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">MI Pasanggrahan</h5>
+                          <p class="card-text">Tasikmalaya | 2014 - 2017</p>
+                          <a href="#" class="btn btn-outline-light">Visit Site</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-10">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">SDN Baciro</h5>
+                          <p class="card-text">Yogyakarta | 2017 - 2020</p>
+                          <a href="#" class="btn btn-outline-light">Visit Site</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-10">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">
+                            Al Kamil Islamic Boarding School
+                          </h5>
+                          <p class="card-text">Cianjur | 2020 - 2024</p>
+                          <a href="#" class="btn btn-outline-light">Visit Site</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-10">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">[Nama SMA]</h5>
+                          <p class="card-text">
+                            [Kota] | [Tahun Masuk] - [Tahun Keluar]
+                          </p>
+                          <a href="#" class="btn btn-outline-light">Visit Site</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
         </div>
-<!-- Konten Who Am I -->
-<div class="row who-am-i">
-    <div class="col-md-6 who-am-i-photo">
-        <img src="https://i.pinimg.com/736x/44/3b/0a/443b0aaa3314b095a968554ac68fbdbc.jpg" alt="Who Am I Photo">
+
+        <!-- Konten Riwayat Organisasi -->
+        <div id="organization" class="about">
+          <div class="container p-md-4 p-2">
+            <h2 class="section-title" data-aos="fade-left">Riwayat Organisasi</h2>
+            <p class="section-description" data-aos="fade-right">
+              Berikut adalah beberapa pengalaman organisasi yang saya miliki selama masa pendidikan.
+            </p>
+            <div class="organization-list">
+              <!-- Item 1 -->
+              <div class="organization-item">
+                <div class="organization-content">
+                  <div class="organization-image">
+                    <img src="https://i.pinimg.com/736x/67/36/91/67369172ab8fd23c3465997f8b922ad9.jpg" alt="Gambar Ketua OSIS">
+                  </div>
+                  <div class="organization-text">
+                    <h5 class="organization-role">Ketua OSIS</h5>
+                    <p class="organization-name">Al Kamil Islamic Boarding School</p>
+                    <p>Cianjur | 2022 - 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="organization-item">
+                <div class="organization-content reverse">
+                  <div class="organization-text">
+                    <h5 class="organization-role">Anggota Pramuka</h5>
+                    <p class="organization-name">Al Kamil Islamic Boarding School</p>
+                    <p>Cianjur | 2021 - 2022</p>
+                  </div>
+                  <div class="organization-image">
+                    <img src="https://i.pinimg.com/736x/67/36/91/67369172ab8fd23c3465997f8b922ad9.jpg" alt="Gambar Anggota Pramuka">
+                  </div>
+                </div>
+              </div>
+              <!-- Tambahkan Item 3 dan 4 sesuai dengan kebutuhan -->
+            </div>
+          </div>
+        </div>
+<div class="container">
+<section id="skills" class="container">
+  <div class="skills-title">My Skills</div>
+  <div class="skills-description">
+    Here are some of the key skills I have acquired throughout my career. Each skill is categorized by its proficiency level.
+  </div>
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3>JavaScript</h3>
+      <p>Advanced</p>
     </div>
-    <div class="col-md-6 who-am-i-text">
-        <h3>Who Am I</h3>
-        <p>Saya adalah seorang [deskripsi mendalam tentang diri Anda]. Saya memiliki ketertarikan dan keahlian dalam [bidang yang relevan]. Dengan pengalaman dalam [pengalaman atau pencapaian], saya berkomitmen untuk [tujuan atau nilai].</p>
+    <div class="skill-category">
+      <h3>Python</h3>
+      <p>Intermediate</p>
     </div>
+    <div class="skill-category">
+      <h3>React</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-category">
+      <h3>Node.js</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="skill-category">
+      <h3>CSS</h3>
+      <p>Advanced</p>
+    </div>
+    <div class="skill-category">
+      <h3>HTML</h3>
+      <p>Expert</p>
+    </div>
+    <!-- Tambahkan lebih banyak skill jika perlu -->
+  </div>
+</section>
 </div>
+        <!-- Footer -->
+        <footer class="footer">
+          <p>&copy; 2024 Nama Anda. All rights reserved.</p>
+        </footer>
 
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Konten Riwayat Pendidikan -->
-    <div class="about">
-      <div class="container">
-        <h2 class="text-center" data-aos="fade-right">Riwayat Pendidikan</h2>
-        <p class="text-center" data-aos="fade-left">
-          Berikut adalah riwayat pendidikan saya dari tingkat dasar hingga
-          tingkat lanjutan, mencakup berbagai institusi yang telah saya jalani
-          selama proses belajar dan pengembangan pribadi saya.
-        </p>
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-              <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-10">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">MI Pasanggrahan</h5>
-                      <p class="card-text">Tasikmalaya | 2014 - 2017</p>
-                      <a href="#" class="btn btn-outline-light">Visit Site</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-10">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">SDN Baciro</h5>
-                      <p class="card-text">Yogyakarta | 2017 - 2020</p>
-                      <a href="#" class="btn btn-outline-light">Visit Site</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-10">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">
-                        Al Kamil Islamic Boarding School
-                      </h5>
-                      <p class="card-text">Cianjur | 2020 - 2024</p>
-                      <a href="#" class="btn btn-outline-light">Visit Site</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-10">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">[Nama SMA]</h5>
-                      <p class="card-text">
-                        [Kota] | [Tahun Masuk] - [Tahun Keluar]
-                      </p>
-                      <a href="#" class="btn btn-outline-light">Visit Site</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Konten Riwayat Organisasi -->
-    <div id="organization" class="about">
-      <div class="container">
-        <h2 class="text-center" data-aos="fade-left">Riwayat Organisasi</h2>
-        <div class="timeline">
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-item-content">
-              <h5>Ketua OSIS - Al Kamil Islamic Boarding School</h5>
-              <p>Cianjur | 2022 - 2023</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-item-content">
-              <h5>Anggota Pramuka - Al Kamil Islamic Boarding School</h5>
-              <p>Cianjur | 2021 - 2022</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-item-content">
-              <h5>Ketua English Club - Al Kamil Islamic Boarding School</h5>
-              <p>Cianjur | 2023 - 2024</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2024 Nama Anda. All rights reserved.</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- AOS JS -->
-    <script>
-      AOS.init({
-        duration: 1000 /* Durasi animasi AOS */,
-        // once: true /* Animasi hanya terjadi sekali saat scroll */
-      });
-    </script>
-  </body>
-</html>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <!-- AOS JS -->
+        <script>
+          AOS.init({
+            duration: 1000 /* Durasi animasi AOS */,
+            // once: true /* Animasi hanya terjadi sekali saat scroll */
+          });
+        </script>
+      </body>
+    </html>
